@@ -83,9 +83,9 @@ RUN conda install --quiet --yes \
 # it takes roughly half the entire build time of all of the images on Travis
 # to add this one package and often causes Travis to timeout.
 #
-# Install IJulia as jovyan and then move the kernelspec out
+# Install IJulia as user_001 and then move the kernelspec out
 # to the system share location. Avoids problems with runtime UID change not
-# taking effect properly on the .local folder in the jovyan home dir.
+# taking effect properly on the .local folder in the user_001 home dir.
 RUN julia -e 'import Pkg; Pkg.update()' && \
     (test $TEST_ONLY_BUILD || julia -e 'import Pkg; Pkg.add("HDF5")') && \
     julia -e "using Pkg; pkg\"add IJulia\"; pkg\"precompile\"" && \

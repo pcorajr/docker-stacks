@@ -7,7 +7,7 @@ The sections below capture this knowledge.
 
 ## Using `sudo` within a container
 
-Password authentication is disabled for the `NB_USER` (e.g., `jovyan`). This choice was made to
+Password authentication is disabled for the `NB_USER` (e.g., `user_001`). This choice was made to
 avoid distributing images with a weak default password that users ~might~ will forget to change
 before running a container on a publicly accessible host.
 
@@ -229,10 +229,10 @@ to test it out. Customize the `nginx.conf` file to set the desired paths and add
 
 ## Host volume mounts and notebook errors
 
-If you are mounting a host directory as `/home/jovyan/work` in your container and you receive
-permission errors or connection errors when you create a notebook, be sure that the `jovyan` user
+If you are mounting a host directory as `/home/user_001/work` in your container and you receive
+permission errors or connection errors when you create a notebook, be sure that the `user_001` user
 (UID=1000 by default) has read/write access to the directory on the host. Alternatively, specify the
-UID of the `jovyan` user on container startup using the `-e NB_UID` option described in the
+UID of the `user_001` user on container startup using the `-e NB_UID` option described in the
 [Common Features, Docker Options section](../using/common.html#Docker-Options)
 
 Ref:
@@ -375,7 +375,7 @@ Ref:
 
 ```python
 import os
-os.environ['PYSPARK_SUBMIT_ARGS'] = '--jars /home/jovyan/spark-streaming-kafka-assembly_2.10-1.6.1.jar pyspark-shell'
+os.environ['PYSPARK_SUBMIT_ARGS'] = '--jars /home/user_001/spark-streaming-kafka-assembly_2.10-1.6.1.jar pyspark-shell'
 import pyspark
 from pyspark.streaming.kafka import KafkaUtils
 from pyspark.streaming import StreamingContext

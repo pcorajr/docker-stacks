@@ -10,7 +10,7 @@ services:
     image: my-notebook
     container_name: ${NAME}
     volumes:
-      - "work:/home/jovyan/work"
+      - "work:/home/user_001/work"
       - "secrets:/etc/letsencrypt"
     ports:
       - "${PORT}:8888"

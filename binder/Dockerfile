@@ -15,7 +15,7 @@ USER root
 
 RUN fix-permissions README.ipynb
 
-# Switch back to jovyan to avoid accidental container runs as root
+# Switch back to user_001 to avoid accidental container runs as root
 USER $NB_UID
 
 WORKDIR $HOME

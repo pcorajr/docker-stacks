@@ -17,7 +17,7 @@ LOGGER = logging.getLogger(__name__)
 def test_nbconvert(container, test_file):
     """Check if Spark notebooks can be executed"""
     host_data_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), "data")
-    cont_data_dir = "/home/jovyan/data"
+    cont_data_dir = "/home/user_001/data"
     output_dir = "/tmp"
     timeout_ms = 600
     LOGGER.info(f"Test that {test_file} notebook can be executed ...")

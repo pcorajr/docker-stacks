@@ -24,7 +24,7 @@ def test_matplotlib(container, test_file, expected_file, description):
     """
     host_data_dir = os.path.join(os.path.dirname(
         os.path.realpath(__file__)), "data")
-    cont_data_dir = "/home/jovyan/data"
+    cont_data_dir = "/home/user_001/data"
     output_dir = "/tmp"
     LOGGER.info(description)
     command = "sleep infinity"

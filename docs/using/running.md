@@ -17,11 +17,11 @@ You can launch a local Docker container from the Jupyter Docker Stacks using the
 docker run -p 8888:8888 jupyter/scipy-notebook:2c80cf3537ca
 
 Executing the command: jupyter notebook
-[I 15:33:00.567 NotebookApp] Writing notebook server cookie secret to /home/jovyan/.local/share/jupyter/runtime/notebook_cookie_secret
+[I 15:33:00.567 NotebookApp] Writing notebook server cookie secret to /home/user_001/.local/share/jupyter/runtime/notebook_cookie_secret
 [W 15:33:01.084 NotebookApp] WARNING: The notebook server is listening on all IP addresses and not using encryption. This is not recommended.
 [I 15:33:01.150 NotebookApp] JupyterLab alpha preview extension loaded from /opt/conda/lib/python3.6/site-packages/jupyterlab
 [I 15:33:01.150 NotebookApp] JupyterLab application directory is /opt/conda/share/jupyter/lab
-[I 15:33:01.155 NotebookApp] Serving notebooks from local directory: /home/jovyan
+[I 15:33:01.155 NotebookApp] Serving notebooks from local directory: /home/user_001
 [I 15:33:01.156 NotebookApp] 0 active kernels
 [I 15:33:01.156 NotebookApp] The Jupyter Notebook is running at:
 [I 15:33:01.157 NotebookApp] http://[all ip addresses on your system]:8888/?token=112bb073331f1460b73768c76dffb2f87ac1d4ca7870d46a
@@ -55,14 +55,14 @@ d67fe77f1a84
 **Example 2** This command pulls the `jupyter/r-notebook` image tagged `e5c5a7d3e52d` from Docker Hub if it is not already present on the local host. It then starts a container running a Jupyter Notebook server and exposes the server on host port 10000. The server logs appear in the terminal and include a URL to the notebook server, but with the internal container port (8888) instead of the the correct host port (10000).
 
 ```
-docker run --rm -p 10000:8888 -v "$PWD":/home/jovyan/work jupyter/r-notebook:e5c5a7d3e52d
+docker run --rm -p 10000:8888 -v "$PWD":/home/user_001/work jupyter/r-notebook:e5c5a7d3e52d
 
 Executing the command: jupyter notebook
-[I 19:31:09.573 NotebookApp] Writing notebook server cookie secret to /home/jovyan/.local/share/jupyter/runtime/notebook_cookie_secret
+[I 19:31:09.573 NotebookApp] Writing notebook server cookie secret to /home/user_001/.local/share/jupyter/runtime/notebook_cookie_secret
 [W 19:31:11.930 NotebookApp] WARNING: The notebook server is listening on all IP addresses and not using encryption. This is not recommended.
 [I 19:31:12.085 NotebookApp] JupyterLab alpha preview extension loaded from /opt/conda/lib/python3.6/site-packages/jupyterlab
 [I 19:31:12.086 NotebookApp] JupyterLab application directory is /opt/conda/share/jupyter/lab
-[I 19:31:12.117 NotebookApp] Serving notebooks from local directory: /home/jovyan
+[I 19:31:12.117 NotebookApp] Serving notebooks from local directory: /home/user_001
 [I 19:31:12.117 NotebookApp] 0 active kernels
 [I 19:31:12.118 NotebookApp] The Jupyter Notebook is running at:
 [I 19:31:12.119 NotebookApp] http://[all ip addresses on your system]:8888/?token=3b8dce890cb65570fb0d9c4a41ae067f7604873bd604f5ac

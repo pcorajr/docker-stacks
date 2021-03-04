@@ -49,7 +49,7 @@ def test_uid_change(container):
     )
     # usermod is slow so give it some time
     c.wait(timeout=120)
-    assert 'uid=1010(jovyan)' in c.logs(stdout=True).decode('utf-8')
+    assert 'uid=1010(user_001)' in c.logs(stdout=True).decode('utf-8')
 
 
 def test_gid_change(container):
@@ -62,8 +62,8 @@ def test_gid_change(container):
     )
     c.wait(timeout=10)
     logs = c.logs(stdout=True).decode('utf-8')
-    assert 'gid=110(jovyan)' in logs
-    assert 'groups=110(jovyan),100(users)' in logs
+    assert 'gid=110(user_001)' in logs
+    assert 'groups=110(user_001),100(users)' in logs
 
 
 def test_nb_user_change(container):
@@ -129,10 +129,10 @@ def test_chown_home(container):
             'CHOWN_HOME=yes',
             'CHOWN_HOME_OPTS=-R'
         ],
-        command=['start.sh', 'bash', '-c', 'chown root:root /home/jovyan && ls -alsh /home']
+        command=['start.sh', 'bash', '-c', 'chown root:root /home/user_001 && ls -alsh /home']
     )
     c.wait(timeout=120)
-    assert "Changing ownership of /home/jovyan to 1000:100 with options '-R'" in c.logs(stdout=True).decode('utf-8')
+    assert "Changing ownership of /home/user_001 to 1000:100 with options '-R'" in c.logs(stdout=True).decode('utf-8')
 
 
 def test_sudo(container):

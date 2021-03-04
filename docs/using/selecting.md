@@ -32,8 +32,8 @@ and versioning strategy.
   - [conda](https://github.com/conda/conda): "cross-platform, language-agnostic binary package manager".
   - [mamba](https://github.com/mamba-org/mamba): "reimplementation of the conda package manager in C++".
 - No preinstalled scientific computing packages
-- Unprivileged user `jovyan` (`uid=1000`, configurable, see options) in group `users` (`gid=100`)
-  with ownership over the `/home/jovyan` and `/opt/conda` paths
+- Unprivileged user `user_001` (`uid=1000`, configurable, see options) in group `users` (`gid=100`)
+  with ownership over the `/home/user_001` and `/opt/conda` paths
 - `tini` as the container entrypoint and a `start-notebook.sh` script as the default command
 - A `start-singleuser.sh` script useful for launching containers in JupyterHub
 - A `start.sh` script useful for running alternative commands in the container (e.g. `ipython`,

@@ -45,11 +45,11 @@ You can now run the image.
 ```
 $ docker run --rm -p 8888:8888 notebook-examples
 Executing the command: jupyter notebook
-[I 01:14:50.532 NotebookApp] Writing notebook server cookie secret to /home/jovyan/.local/share/jupyter/runtime/notebook_cookie_secret
+[I 01:14:50.532 NotebookApp] Writing notebook server cookie secret to /home/user_001/.local/share/jupyter/runtime/notebook_cookie_secret
 [W 01:14:50.724 NotebookApp] WARNING: The notebook server is listening on all IP addresses and not using encryption. This is not recommended.
 [I 01:14:50.747 NotebookApp] JupyterLab beta preview extension loaded from /opt/conda/lib/python3.6/site-packages/jupyterlab
 [I 01:14:50.747 NotebookApp] JupyterLab application directory is /opt/conda/share/jupyter/lab
-[I 01:14:50.754 NotebookApp] Serving notebooks from local directory: /home/jovyan
+[I 01:14:50.754 NotebookApp] Serving notebooks from local directory: /home/user_001
 [I 01:14:50.754 NotebookApp] 0 active kernels
 [I 01:14:50.754 NotebookApp] The Jupyter Notebook is running at:
 [I 01:14:50.754 NotebookApp] http://[all ip addresses on your system]:8888/?token=04646d5c5e928da75842cd318d4a3c5aa1f942fc5964323a

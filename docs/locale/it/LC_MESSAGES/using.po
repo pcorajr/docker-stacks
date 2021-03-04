@@ -76,9 +76,9 @@ msgstr ""
 # 4621c78dfaeb43379c5d3437238b2ef8
 #: ../../using/common.md:26
 msgid ""
-"-e NB_USER=jovyan - Instructs the startup script to change the default "
-"container username from jovyan to the provided value. Causes the script to "
-"rename the jovyan user home folder. For this option to take effect, you must"
+"-e NB_USER=user_001 - Instructs the startup script to change the default "
+"container username from user_001 to the provided value. Causes the script to "
+"rename the user_001 user home folder. For this option to take effect, you must"
 " run the container with --user root and set the working directory -w "
 "/home/$NB_USER. This feature is useful when mounting host volumes with "
 "specific home folder."
@@ -189,7 +189,7 @@ msgstr ""
 # 9a4fc69536fa4e8580ed4f5e77d338f0
 #: ../../using/common.md:36
 msgid ""
-"-v /some/host/folder/for/work:/home/jovyan/work - Mounts a host machine "
+"-v /some/host/folder/for/work:/home/user_001/work - Mounts a host machine "
 "directory as folder in the container. Useful when you want to preserve "
 "notebooks and other work even after the container is destroyed. You must "
 "grant the within-container notebook user or group (NB_UID or NB_GID) write "
@@ -350,7 +350,7 @@ msgstr ""
 #: ../../using/common.md:105
 msgid ""
 "The default Python 3.x Conda environment resides in /opt/conda. The "
-"/opt/conda/bin directory is part of the default jovyan user's $PATH. That "
+"/opt/conda/bin directory is part of the default user_001 user's $PATH. That "
 "directory is also whitelisted for use in sudo commands by the start.sh "
 "script."
 msgstr ""
@@ -358,7 +358,7 @@ msgstr ""
 # 6c8c478e872d444b904fecd01e9911da
 #: ../../using/common.md:107
 msgid ""
-"The jovyan user has full read/write access to the /opt/conda directory. You "
+"The user_001 user has full read/write access to the /opt/conda directory. You "
 "can use either conda or pip to install new packages without any additional "
 "permissions."
 msgstr ""
@@ -539,11 +539,11 @@ msgstr ""
 # 3cecb98fa6e54f99a09a04b81a4bc04e
 #: ../../using/recipes.md:120
 msgid ""
-"If you are mounting a host directory as /home/jovyan/work in your container "
+"If you are mounting a host directory as /home/user_001/work in your container "
 "and you receive permission errors or connection errors when you create a "
-"notebook, be sure that the jovyan user (UID=1000 by default) has read/write "
+"notebook, be sure that the user_001 user (UID=1000 by default) has read/write "
 "access to the directory on the host. Alternatively, specify the UID of the "
-"jovyan user on container startup using the -e NB_UID option described in the"
+"user_001 user on container startup using the -e NB_UID option described in the"
 " Common Features, Docker Options section"
 msgstr ""
 
@@ -1004,8 +1004,8 @@ msgstr ""
 # e37862b78262475182c34461d2fae08e
 #: ../../using/selecting.md:29
 msgid ""
-"Unprivileged user jovyan (uid=1000, configurable, see options) in group "
-"users (gid=100) with ownership over the /home/jovyan and /opt/conda paths"
+"Unprivileged user user_001 (uid=1000, configurable, see options) in group "
+"users (gid=100) with ownership over the /home/user_001 and /opt/conda paths"
 msgstr ""
 
 # cdd04f4dbb864e82b8b993ccb1670687
